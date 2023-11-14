@@ -42,14 +42,21 @@ export default function Payment() {
                     });
 
                     const resposns = await res.json();
-                    console.log(resposns);
-                    setisloading(false);
-                    // if (resposns.success) {
-                    //     const url = resposns.res.checkout_url;
-                    //     window.location.href = url;
-                    // } else {
-                    //     toast.warn(resposns.error)
-                    // }
+
+
+                    if (resposns.success) {
+                        const paymentcallresponse = await paymentCall(resposns.res);
+                        setisloading(false);
+                        if (paymentcallresponse.success) {
+                            const url = paymentcallresponse.data.checkout_url;
+                            window.location.href = url;
+
+                        } else {
+                            toast.warn(resposns.error);
+                        }
+                    } else {
+                        toast.warn(resposns.error);
+                    }
 
 
                 } else {
@@ -69,16 +76,16 @@ export default function Payment() {
 
                 const resposns = await res.json();
 
+
                 if (resposns.success) {
                     const paymentcallresponse = await paymentCall(resposns.res);
-
+                    setisloading(false);
                     if (paymentcallresponse.success) {
-                        setisloading(false);
 
-                        console.log(paymentcallresponse);
+                        const url = paymentcallresponse.data.checkout_url;
+                        window.location.href = url;
 
                     } else {
-                        setisloading(false);
                         toast.warn(resposns.error);
                     }
                 } else {

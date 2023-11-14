@@ -23,49 +23,10 @@ shurjopay.config(
 );
 
 
-//create make payment function and export it for uses from otherwhere
-export async function makingpayment(alldata) {
-
-    const { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, title, month, corrospendingBalance, clientOrderID } = alldata;
-
-    return new Promise((resolve, reject) => {
-        shurjopay.makePayment(
-            {
-                "amount": corrospendingBalance,
-                "order_id": clientOrderID, // You might want to generate a unique order_id
-                "currency": "BDT",
-                "customer_name": fName + " " + lName,
-                "customer_address": `${psVillage},${psUnion},${psUpazila},${psDistrict} `,
-                "client_ip": "102.324.0.5",
-                "customer_phone": familyCall,
-                "customer_city": psDistrict,
-                "customer_post_code": psPost,
-                "value1": title,
-                "value2": month,
-                "value3": customid,
-                "value4": wadmit
-            },
-            (response_data) => {
-                // TODO Handle response from shurjopay and update your system
-                resolve(response_data);
-
-                console.log(response_data);
-            },
-            (error) => {
-                // TODO Handle error response
-                console.log(error);
-                reject(error);
-            }
-        );
-    });
-
-}
 
 
 
-
-
-//create make payment function and export it for uses from otherwhere
+//create varify payment function and export it for uses from otherwhere
 export async function varifyingpayment(order_id) {
 
     return new Promise((resolve, reject) => {
