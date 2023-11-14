@@ -1,0 +1,89 @@
+.headignWrp {
+    text-align: center;
+    width: 100%;
+}
+
+.headignWrp>h1 {
+    font-size: 33px;
+    margin-top: 5px;
+    color: rgb(65, 65, 65);
+}
+
+.headignWrp>p {
+    font-size: 20px;
+    color: rgb(114, 114, 114);
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.facilityCardWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.facilityCardWrp>div {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    min-height: 350px;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.fecolityIcn {
+    color: #014694;
+    font-size: 70px;
+}
+
+.facilityCardWrp>div>h3 {
+    color: rgb(65, 65, 65);
+    font-size: 23px;
+}
+
+.facilityCardWrp>div>ul {
+    list-style: none;
+}
+
+.facilityCardWrp>div>ul>li {
+    padding: 7px 0;
+    color: rgb(114, 114, 114);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: -50px !important;
+}
+
+.rightArrowIcons {
+    color: #fff;
+}
+
+/* @media (max-width:990px) {
+    .headignWrp>p {
+        width: 70%;
+    }
+} */
+
+@media (max-width:768px) {
+    .headignWrp {
+        text-align: left;
+    }
+
+    .headignWrp>h1 {
+        text-align: center;
+    }
+
+    .headignWrp>p {
+        width: 100%;
+    }
+
+    .facilityCardWrp {
+        display: flex;
+        flex-direction: column;
+    }
+}

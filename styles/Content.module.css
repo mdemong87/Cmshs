@@ -1,0 +1,53 @@
+.mainWrperii {
+    width: 58%;
+    height: auto;
+
+    margin-top: 0px;
+}
+
+.mainii {
+
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+
+
+}
+
+.speechIcons {
+    margin-right: 10px;
+
+}
+
+
+.speechOfPrisident {
+    padding-top: 10px;
+    width: fit-content;
+    margin-top: 13px;
+    color: rgba(29, 29, 233, 0.918);
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.img {
+    width: 100%;
+    background-size: cover;
+    height: 360px;
+    margin-top: 20px;
+
+}
+
+
+
+
+@media (max-width:990px) {
+    .speechOfPrisident {
+        display: block;
+        width: 95%;
+        margin: auto;
+        text-align: left;
+    }
+}

@@ -1,0 +1,57 @@
+.paymentWrp {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 1fr;
+}
+
+.paymentFiledWrper {
+    display: grid;
+    grid-template-columns: .8fr .3fr .4fr .4fr;
+    grid-gap: 15px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+
+.paymentWrp>div {
+    padding: 10px 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.corospondingStudentWrp {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+}
+
+.corospondingStudent {
+    border: 1px solid black;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .2fr .4fr .4fr .4fr .4fr .4fr;
+}
+
+.corospondingStudent>div {
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addTickWrp {
+    cursor: pointer;
+}
+
+.addTickController {
+    background: rgb(14, 240, 14);
+    color: #fff;
+}
+
+.addTick {
+    font-size: 19px;
+}

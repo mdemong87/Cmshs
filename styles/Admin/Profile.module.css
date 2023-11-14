@@ -1,0 +1,11 @@
+.profileWrp {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    font-size: 30px;
+    color: #fff;
+}

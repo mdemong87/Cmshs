@@ -1,0 +1,107 @@
+.container {
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+
+.btnWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnWrp>button {
+    background: #ddd;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: .70;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.activebtn {
+    background: #014694 !important;
+    color: #fff;
+    opacity: 1 !important;
+}
+
+
+
+
+/* routingtable conponnent css code from here */
+
+.noticWrp {
+    width: 100%;
+    display: grid;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(216, 216, 216);
+
+}
+
+.heading>div {
+    padding: 15px 0px;
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    background: rgb(206, 206, 206);
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.body>div {
+    text-align: center;
+    border: 1px solid rgb(216, 216, 216);
+    display: grid;
+    padding: 15px 0px;
+    align-items: center;
+    color: rgb(125, 125, 125);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.heading {
+    display: grid;
+    grid-template-columns: 1.4fr .5fr 2fr .7fr;
+    text-align: center;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 1.4fr .5fr 2fr .7fr;
+    text-align: center;
+}
+
+.noticWrp>div:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    color: #014694;
+}
+
+
+
+@media (max-width:990px) {
+    .container {
+        margin-top: 90px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .btnWrp>button {
+        font-size: 17px;
+        font-weight: 500;
+    }
+}

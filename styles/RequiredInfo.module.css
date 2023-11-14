@@ -1,0 +1,7 @@
+.small {
+    background: yellow;
+    margin-left: 20px;
+    padding: 2px 5px;
+    width: 90%;
+    border-radius: 8px;
+}

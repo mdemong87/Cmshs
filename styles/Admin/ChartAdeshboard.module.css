@@ -1,0 +1,33 @@
+.chartWrp {
+    border-radius: 7px;
+    background: #fff;
+    padding-top: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.chartTitle {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.chartTitle>div {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tooltipred {
+    height: 15px;
+    width: 15px;
+    background: red;
+    margin-left: 5px;
+}
+
+.tooltipexpenseb {
+    height: 15px;
+    width: 15px;
+    background: rgb(17, 207, 17);
+    margin-left: 5px;
+}

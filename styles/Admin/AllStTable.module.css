@@ -1,0 +1,45 @@
+.table {
+    border: 1px solid rgb(162, 162, 162);
+    width: 95%;
+    margin: auto;
+}
+
+.thead {
+    background: #014694;
+    color: #fff;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: .5fr .6fr 1fr 1.2fr .7fr .7fr 1fr 1fr;
+    border: 1px solid black;
+}
+
+.headdiv {
+    border: .5px solid rgb(162, 162, 162);
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.bodydiv {
+    border: .5px solid rgb(162, 162, 162);
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+    color: rgb(75, 75, 75);
+}
+
+.tbody {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: .5fr .6fr 1fr 1.2fr .7fr .7fr 1fr 1fr;
+    transition: 1s;
+}
+
+.tbody:hover {
+    background: rgb(200, 200, 200);
+}

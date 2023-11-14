@@ -1,0 +1,55 @@
+.logonameWrp {
+    height: 100%;
+}
+
+
+.logo {
+    width: 165px;
+    height: 180px;
+    margin-top: -13px;
+    margin-left: -4px;
+    background: #72a3db !important;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0% 60%);
+    position: relative;
+}
+
+.logoPloygy {
+    background: #014694;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 96%, 0% 60%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #72a3db;
+    border-right: 1px solid #72a3db;
+    border-top: 1px solid #72a3db;
+}
+
+.logoPloygy>img {
+    width: 90%;
+    height: 90%;
+}
+
+@media (max-width:990px) {
+    .logo {
+        width: 110px;
+        height: 120px;
+        margin-top: -6px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .logo {
+        margin-left: -15px;
+    }
+
+    .logoPloygy {
+        border-left: 1px solid #216fc8;
+        border-right: 1px solid #216fc8;
+        border-top: 1px solid #216fc8;
+    }
+
+}

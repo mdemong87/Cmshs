@@ -1,0 +1,61 @@
+.wrper {
+    padding: 0px 15px;
+    position: relative;
+}
+
+.itemsWrper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.itemsWrper>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.itemsWrper>div>input {
+    width: 120px;
+    height: 30px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.titleWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btnWrp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.edite {
+    background: red;
+    color: #fff;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save {
+    background: green;
+    color: #fff;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+.aboutComponnentWrp {
+    margin-top: 20px;
+    width: 100% !important;
+}
+
+.aboutWrp>h2 {
+    font-size: 33px;
+    margin-top: 5px;
+    color: rgb(65, 65, 65);
+}
+
+.aboutWrp>p {
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+.aboutBoxWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.aboutBoxWrp>article {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid #014694;
+}
+
+.one {
+    background: linear-gradient(rgba(0, 0, 0, 0.613), rgba(0, 0, 0, 0.613)), url("../public/2.jpg");
+}
+
+.two {
+    background: linear-gradient(rgba(0, 0, 0, 0.613), rgba(0, 0, 0, 0.613)), url("../public/4.jpg");
+}
+
+.three {
+    background: linear-gradient(rgba(0, 0, 0, 0.613), rgba(0, 0, 0, 0.613)), url("../public/1.jpg");
+}
+
+.aboutBoxWrp>article>h3 {
+    font-size: 23px;
+    color: #fff;
+}
+
+.aboutBoxWrp>article>p {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* for about page css code here */
+.aboutContainer {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.fristAboutsectionWrp {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    margin: 0 0px;
+    margin-bottom: 40px;
+}
+
+.fristAboutsectionWrp>div {
+    width: 100%;
+}
+
+.fristAboutsectionWrp>div>img {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #014694;
+    border-radius: 10px;
+}
+
+
+.aboutpageFristWrp>h2 {
+    font-size: 30px;
+    margin-top: 5px;
+    color: rgb(65, 65, 65);
+}
+
+.aboutpageFristWrp>p {
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+
+
+
+@media (max-width:990px) {
+    .aboutContainer {
+        margin-top: 140px;
+        margin-bottom: 70px !important;
+    }
+
+}
+
+@media (max-width:768px) {
+    .aboutBoxWrp {
+        flex-direction: column;
+    }
+
+
+    .fristAboutsectionWrp {
+        grid-template-columns: 1fr;
+    }
+
+}

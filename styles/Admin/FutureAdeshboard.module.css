@@ -1,0 +1,72 @@
+.fretured {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.futureList {
+    background: #fff;
+    border-radius: 7px;
+    align-items: center;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    padding: 15px;
+}
+
+.futureList>div {
+    display: flex;
+    align-items: center;
+}
+
+.iconsCircle {
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+.student {
+    background: rgba(54, 219, 54, 0.357);
+}
+
+.teacher {
+    background: rgba(28, 62, 164, 0.392);
+}
+
+.earning {
+    background: #d1cb1568;
+}
+
+.icons {
+    font-size: 45px;
+    margin: auto;
+    display: flex;
+}
+
+.istudent {
+    color: rgba(54, 219, 54, 0.788);
+}
+
+.iteacher {
+    color: rgba(28, 62, 164, 0.674);
+}
+
+.iearning {
+    color: rgba(188, 183, 33, 0.735);
+}
+
+.fetervalue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    color: rgb(172, 172, 172);
+}
+
+.digit {
+    color: rgb(43, 43, 43);
+    font-size: 22px;
+}

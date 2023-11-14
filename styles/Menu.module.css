@@ -1,0 +1,40 @@
+.menuWrp {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    background: #f2f3f5;
+    padding-bottom: 5px;
+}
+
+.menuWrp h3 {
+    font-weight: 700;
+    font-size: 22px;
+    background: #014694;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.link {
+    padding: 12px 0px;
+    text-align: center;
+    font-size: 17px;
+    border-bottom: 1px solid #ceddee;
+}
+
+.link:hover {
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 10px;
+}

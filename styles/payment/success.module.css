@@ -1,0 +1,76 @@
+.successWrp {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.successWrp>div {
+    width: 350px;
+    margin: auto;
+}
+
+.successWrp>div>div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #014694;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tickIcon {
+    font-size: 70px;
+    color: #014694;
+}
+
+.crossIcon {
+    font-size: 70px;
+    color: #014694;
+    transform: rotate(45deg);
+}
+
+.successWrp>div>h2 {
+    text-align: center;
+    color: #014694;
+}
+
+.successWrp>div>h1 {
+    text-align: center;
+    color: #014694;
+}
+
+.successWrp>div>p {
+    text-align: center !important;
+    color: #014694;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.DownloadBtn {
+    background: #014694;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    padding: 3px 8px;
+}
+
+.downloadIcons {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+@media (max-width:990px) {
+    .successWrp {
+        margin-top: 110px;
+        margin-bottom: 30px;
+    }
+}

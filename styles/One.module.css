@@ -1,0 +1,40 @@
+.oneWrp {
+    width: 100%;
+    margin-top: 30px;
+    margin-top: 30px;
+    border: 1px solid #b9b9b9;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 0px;
+
+}
+
+.fildErp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid #b9b9b9;
+    margin: 20px 20px;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+
+.subhead {
+    padding-left: 22px;
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+
+}
+
+@media (max-width:990px) {
+    .fildErp {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:768px) {
+    .fildErp {
+        grid-template-columns: 1fr;
+    }
+}

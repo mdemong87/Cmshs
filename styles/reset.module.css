@@ -1,0 +1,77 @@
+.loginWRp {
+    width: 40%;
+    border: 2px solid rgb(216, 216, 216);
+    margin: auto;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px !important;
+    margin-bottom: 50px !important;
+    position: relative;
+
+}
+
+.h2 {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.input {
+    margin: 10px 20px;
+    padding: 10px;
+    border: 1px solid #9dbee4;
+    border-radius: 5px;
+}
+
+.input:focus {
+    outline-color: #014694;
+
+}
+
+.button {
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: #014694;
+    transition: .3s;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.forgetpass {
+    text-align: center;
+    padding-bottom: 10px;
+    color: rgb(72, 72, 72);
+}
+
+@media (min-width:1350px) {
+    .loginWRp {
+        width: 30%;
+        margin: auto;
+    }
+}
+
+@media (max-width:990px) {
+    .loginWRp {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (max-width:700px) {
+    .loginWRp {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width:500px) {
+    .loginWRp {
+        width: 80%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,79 @@
+.downloadWrp {
+    border: 1px solid rgb(150, 150, 150);
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 180px;
+    margin-bottom: 60px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadWrp>p {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.icons {
+    padding-right: 5px;
+    font-size: 25px;
+
+}
+
+.downloadBtn {
+    background: #014694;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+}
+
+
+.iconWrper {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 3px solid #014694;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tickIcon {
+    font-size: 70px;
+    color: #014694;
+}
+
+
+.list {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.list>li {
+    text-align: left;
+    padding: 4px 0;
+}
+
+
+
+
+
+@media (max-width:990px) {
+    .downloadWrp {
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+
+}

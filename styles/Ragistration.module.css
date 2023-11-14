@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 20px 0;
+    margin-top: 120px;
+}
+
+.RAndAWrp {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.h2 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+@media (max-width:990px) {
+    .container {
+        margin-top: 90px;
+    }
+}

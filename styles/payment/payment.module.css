@@ -1,0 +1,67 @@
+.paymentWrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 30px;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.paymentWrp>div>img {
+    width: 100%;
+}
+
+.paymentInputWrp {
+    border: 1px solid #4588d3;
+    border-radius: 10px;
+    padding: 0px 30px;
+    margin-right: 50px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paymentInputWrp>input {
+    border: 1px solid #014694;
+    border-radius: 5px;
+}
+
+.paymentInputWrp>select {
+    border: 1px solid #014694;
+    border-radius: 5px;
+    color: rgb(91, 91, 91);
+}
+
+.paymentInputWrp>button {
+    background: #014694;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+
+@media (max-width:990px) {
+    .paymentWrp {
+        margin-top: 100px;
+        grid-template-columns: .9fr 1fr;
+    }
+
+}
+
+
+@media (max-width:768px) {
+    .paymentWrp {
+        grid-template-columns: 1fr;
+    }
+
+    .paymentInputWrp {
+        margin-right: 0px !important;
+    }
+
+}

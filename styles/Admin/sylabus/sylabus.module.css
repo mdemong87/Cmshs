@@ -1,0 +1,97 @@
+.inputWrp {
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.inputWrp>button {
+    background: green;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.allnoticewrp {
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+.noticWrp {
+    width: 100%;
+    display: grid;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+
+
+}
+
+.heading>div {
+    padding: 15px 0px;
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    background: rgb(206, 206, 206);
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.body>div {
+    text-align: center;
+    border: 1px solid rgb(216, 216, 216);
+    display: grid;
+    padding: 15px 0px;
+    align-items: center;
+    color: rgb(125, 125, 125);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.body>div>button {
+    width: 70px;
+    margin: auto;
+    background: rgb(239, 37, 37);
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.icons {
+    margin: 4px;
+    font-size: 20px;
+
+}
+
+.heading {
+    display: grid;
+    grid-template-columns: .5fr 2fr 1.4fr 2fr .7fr;
+    text-align: center;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: .5fr 2fr 1.4fr 2fr .7fr;
+    text-align: center;
+}
+
+.noticWrp>div:hover {
+    background-color: rgb(220, 220, 220);
+}

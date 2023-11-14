@@ -1,0 +1,10 @@
+.adminWrp {
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 157px 410px 408px;
+    margin: 25px 20px;
+    border-radius: 10px;
+    height: fit-content;
+    grid-gap: 15px;
+}

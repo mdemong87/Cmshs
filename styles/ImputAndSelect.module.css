@@ -1,0 +1,56 @@
+.require {
+    color: red;
+    padding-left: 7px;
+    font-size: 23px;
+}
+
+.seleItem {
+    font-size: 17px;
+}
+
+
+
+.selectWrp {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(95, 95, 95);
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(170, 170, 170);
+    height: 40px;
+}
+
+.selectWrp:focus {
+    background: rgb(247, 247, 247);
+    border: 2px solid rgb(140, 140, 140);
+    outline: none;
+}
+
+.form {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(95, 95, 95);
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(170, 170, 170);
+    height: 40px;
+
+}
+
+.input:focus {
+    background: rgb(247, 247, 247);
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.label {
+    padding: 5px 17px;
+}

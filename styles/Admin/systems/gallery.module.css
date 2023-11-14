@@ -1,0 +1,131 @@
+.marqueeWrp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-gap: 0px;
+
+}
+
+
+.marqueeWrp>div>textarea {
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.inputWrp {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputWrp>button {
+    background: green;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.lineWrp {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.lineWrp>div {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-gap: 10px;
+    margin: 20px 0px;
+
+}
+
+.lineWrp>div>marquee {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.lineWrp>div>button {
+    background: red;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imageWrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.imageWrp>div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+}
+
+
+.image {
+    width: 100%;
+    height: 370px;
+    padding: 10px;
+    background: #014694;
+
+}
+
+.image>img {
+    width: 100%;
+    height: 100%;
+}
+
+.deleteBtn {
+    background-color: rgba(255, 0, 0, 0.844);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+
+}

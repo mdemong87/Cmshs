@@ -1,0 +1,36 @@
+.testimonialWrp {
+    margin: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    position: relative;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonialBtn {
+    background: #014694;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.inputerWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}

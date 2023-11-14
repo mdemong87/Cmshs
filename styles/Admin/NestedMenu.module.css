@@ -1,0 +1,59 @@
+.asideWrp {
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    overflow: scroll;
+}
+
+.asideWrp::-webkit-scrollbar {
+    display: none;
+}
+
+.Wrp {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding-top: 10px;
+
+    justify-content: center;
+}
+
+.link {
+    padding-left: 40px;
+    padding-right: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 10px;
+    border-bottom: 1px solid #0f64c4;
+    width: 100%;
+}
+
+.nes {
+    display: grid;
+    grid-template-columns: .3fr 3fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.nestedLink {
+    display: none;
+}
+
+.openNestedLink {
+    display: block;
+    padding-left: 60px;
+    background: #0f64c4;
+
+}
+
+.arroIcons {
+    color: #fff;
+
+}
+
+.link:hover {
+    background: #09376b;
+}

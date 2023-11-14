@@ -1,0 +1,24 @@
+.container {
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+
+.notice {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100% !important;
+}
+
+@media (max-width:990px) {
+    .container {
+        margin-top: 100px;
+    }
+
+
+    .notice {
+        margin-top: -100px;
+    }
+}

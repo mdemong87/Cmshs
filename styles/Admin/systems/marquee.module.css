@@ -1,0 +1,71 @@
+.marqueeWrp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-gap: 0px;
+
+}
+
+
+.marqueeWrp>div>textarea {
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.inputWrp {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputWrp>button {
+    background: green;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.lineWrp {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.lineWrp>div {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-gap: 10px;
+    margin: 20px 0px;
+
+}
+
+.lineWrp>div>marquee {
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.lineWrp>div>button {
+    background: red;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+}

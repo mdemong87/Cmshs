@@ -1,0 +1,202 @@
+.navberWrp {
+    color: #fff;
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.imiditateLinkWrp {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-end;
+    margin-top: -20px;
+}
+
+.onlyForMini {
+    display: flex;
+    gap: 30px;
+}
+
+.moboNav {
+    display: none;
+}
+
+.CroosBtnWrp {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.crossicon {
+    display: none;
+}
+
+.link {
+    transition: .3s;
+    padding-right: 28px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.searchLink {
+    transition: .3s;
+    padding-right: 28px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.seacrhIcons {
+    font-size: 20px;
+    transform: translateY(6px);
+}
+
+.activeLink {
+    transition: .3s;
+    padding-right: 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: #dbb523;
+    transition: .3s;
+}
+
+.link:hover {
+    color: #dbb523;
+}
+
+.searchLink:hover {
+    color: #dbb523;
+}
+
+@media (max-width:990px) {
+
+    .moboNav {
+        display: block;
+        float: right;
+        font-size: 32px;
+        z-index: 100;
+        margin-top: -10px;
+
+    }
+
+    .searchLink {
+        display: none;
+    }
+
+
+    .NavItem {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        color: black;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .linkWrp {
+        background: #fff;
+        height: 100%;
+    }
+
+    .imiditateLinkWrp {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-y: scroll !important;
+        height: 90%;
+        margin: 10px;
+        padding-bottom: 30px;
+        align-content: flex-start;
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    .imiditateLink {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .transparantDiv {
+        background: black;
+        opacity: .25;
+    }
+
+
+
+    .crossicon {
+        display: block;
+        background: #014694;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: .3s;
+        border-radius: 10px;
+    }
+
+    .crossicon:hover {
+        transform: rotate(-90deg);
+    }
+
+    .link {
+        font-weight: 500;
+        width: 100%;
+        transition: .3s;
+        padding-left: 20px;
+        height: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .activeLink {
+        font-weight: 500;
+        width: 100%;
+        transition: .3s;
+        padding-left: 20px;
+        height: 100%;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        color: #014694;
+        background: rgb(243, 243, 243);
+        border-radius: 10px;
+    }
+
+    .linkWrp::-webkit-scrollbar {
+        display: none;
+    }
+
+    .moboIcons {
+        cursor: pointer;
+    }
+
+
+    .link:hover {
+        background: rgb(243, 243, 243);
+        border-radius: 10px;
+    }
+
+    .active {
+        display: none;
+        animation: fade_in_show .6s ease-in-out;
+    }
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}

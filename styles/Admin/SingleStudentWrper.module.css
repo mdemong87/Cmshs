@@ -1,0 +1,134 @@
+.SingleWrper {
+    height: fit-content;
+    margin: 25px 20px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+
+}
+
+.upprofile>div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    margin: 20px 20px;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.studeinfoTopadditialtionWrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    column-gap: 22px;
+    margin-top: -15px !important;
+}
+
+.studeinfoTopadditialtionWrp>div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 30px !important;
+
+}
+
+.profile {
+    width: 220px;
+    height: 235px;
+    margin-left: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.topDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.topDetails>div {
+    height: fit-content;
+    padding: 17px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+}
+
+
+.topDetails>div>b {
+    width: auto;
+}
+
+.downDetails {
+    padding-bottom: 20px;
+}
+
+.downDetails>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 20px;
+    padding: 15px;
+    grid-template-rows: auto;
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 8px;
+    column-gap: 20px;
+}
+
+.downDetails>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.downDetails>h2 {
+    padding: 0px 30px;
+    font-size: 27px;
+}
+
+.details {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.btnWrper {
+    margin: 10px 20px;
+    margin-right: 25px;
+}
+
+.btnWrper>div {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnWrper>div>div>button {
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btnWrper>div>:first-child {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btnWrper>div>:last-child>button {
+    background: red;
+}

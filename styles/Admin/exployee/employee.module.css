@@ -1,0 +1,132 @@
+.container {
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 25px 20px;
+}
+
+.btnWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.btnWrp>button {
+    background: #ddd;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: .70;
+    border-radius: 5px;
+    z-index: 21;
+}
+
+.activebtn {
+    background: green !important;
+    color: #fff;
+    opacity: 1 !important;
+}
+
+
+
+
+
+
+
+
+
+
+.inputWrp {
+    margin: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.inputWrp>input {
+    width: 100%;
+}
+
+.secinputWrp {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.secinputWrp>input {
+    width: fit-content;
+    border: 1px solid #ddd;
+}
+
+.secinputWrp>button {
+    background: green;
+    width: 150px !important;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+}
+
+.allnoticewrp {
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.btnWrpandlastWrp {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnWrpandlastWrp>div {
+    width: 100%;
+}
+
+.btnWrpandlastWrp>div>p {
+    color: green;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.btnWrpandlastWrp>button {
+    background: green;
+    width: 150px !important;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.btnWrpandlastWrp>div>input {
+    border: 1px solid #ddd;
+}

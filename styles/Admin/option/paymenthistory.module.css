@@ -1,0 +1,61 @@
+.PaymentHistoryWrp {
+    margin: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.headignWrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headignWrp>h1 {
+    margin: 0;
+}
+
+.tableWrp {
+    margin-top: 30px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    border: 1px solid rgb(203, 203, 203);
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+}
+
+.table>thead {
+    background: #014694;
+    color: #fff;
+}
+
+.table>thead>tr>td {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.table>tbody>tr>td {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.statusHighlighter {
+    padding: 2px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.unpaid {
+    background: rgb(255, 123, 123);
+    color: #fff;
+}
+
+.paid {
+    background: rgb(145, 255, 123);
+    color: #fff;
+}
