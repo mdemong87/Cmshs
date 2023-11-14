@@ -33,8 +33,8 @@ async function forget(req, res) {
 
 
                     // const dataobject = {
-                    //     uid: id,
-                    //     name: `${fName} ${lName}`,
+                    //     uid: res_data[0].value3,
+                    //     name: res_data[0].name,
                     //     fName: faterName,
                     //     pTitle: title,
                     //     pType: month || null,

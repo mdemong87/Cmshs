@@ -10,22 +10,24 @@ export const config = {
 export default async function handler(req) {
 
 
+
+    const { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, title, month, corrospendingBalance, clientOrderID } = await req.json();
+
+
+    // defind credential in a variable
+    const SP_ENDPOINT = process.env.NEXT_PUBLIC_SP_ENDPOINT;
+    const SP_USERNAME = process.env.NEXT_PUBLIC_SP_USERNAME;
+    const SP_PASSWORD = process.env.NEXT_PUBLIC_SP_PASSWORD;
+    const SP_PREFIX = process.env.NEXT_PUBLIC_SP_PREFIX;
+    const SP_RETURN_URL = process.env.NEXT_PUBLIC_SP_RETURN_URL;
+    const clientIPAddress = "102.324.0.5";
+
+
     try {
 
-        const { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, title, month, corrospendingBalance, clientOrderID } = await req.json();
 
-
-        // defind credential in a variable
-        const SP_ENDPOINT = process.env.NEXT_PUBLIC_SP_ENDPOINT;
-        const SP_USERNAME = process.env.NEXT_PUBLIC_SP_USERNAME;
-        const SP_PASSWORD = process.env.NEXT_PUBLIC_SP_PASSWORD;
-        const SP_PREFIX = process.env.NEXT_PUBLIC_SP_PREFIX;
-        const SP_RETURN_URL = process.env.NEXT_PUBLIC_SP_RETURN_URL;
-        const clientIPAddress = "102.324.0.5";
-
-
-
-        const ganarate_token = await fetch('https://engine.shurjopayment.com/api/get_token', {
+        //ganarate token for payment initialte
+        const ganarate_token = await fetch(`${SP_ENDPOINT}/api/get_token`, {
             method: "post",
             headers: {
                 "content-Type": "application/json",
@@ -37,6 +39,8 @@ export default async function handler(req) {
         const responses = await ganarate_token.json();
 
 
+
+        //initiate a payment with the ganarated token
         const initiate_payment = await fetch(responses.execute_url, {
             method: "POST",
             headers: {
@@ -73,6 +77,7 @@ export default async function handler(req) {
 
 
 
+        //simple give the success response after the payment was initite
         return NextResponse.json({
             messge: 'Payment Initiate Successfully',
             success: true,
@@ -85,6 +90,9 @@ export default async function handler(req) {
 
 
     } catch (error) {
+
+
+        //if there was an error give this error response
         return NextResponse.json({
             error: 'There was a server side problem',
             success: false
