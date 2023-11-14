@@ -82,49 +82,13 @@ export default async function handler(req) {
         })
 
 
-        // const dataobject = {
-        //     uid: id,
-        //     name: `${fName} ${lName}`,
-        //     fName: faterName,
-        //     pTitle: title,
-        //     pType: month || null,
-        //     amount: corrospendingBalance,
-        //     option: "Online",
-        //     status: false,
-        //     order_id: paymentInitiate_response.sp_order_id
-        // };
-
-
-        // const system_res = await paymentSystemUpdater(dataobject);
-
-        // if (system_res) {
-
-
-        //     return NextResponse.json({
-        //         messge: 'Payment Initiate Successfully',
-        //         success: true,
-        //         data: paymentInitiate_response
-        //     }, {
-        //         status: 200
-        //     })
-
-        // } else {
-        //     return NextResponse.json({
-        //         success: false,
-        //         error: "There Was a Server Side Problem"
-        //     }, {
-        //         status: 500
-        //     })
-
-        // }
-
-
-
-
-
 
 
     } catch (error) {
-        return NextResponse.json({ error: 'There was a server side problem' }, { status: 500 })
+        return NextResponse.json({
+            error: 'There was a server side problem',
+            success: false
+        },
+            { status: 500 })
     }
 }

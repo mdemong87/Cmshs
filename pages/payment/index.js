@@ -43,18 +43,19 @@ export default function Payment() {
 
                     const resposns = await res.json();
 
-
                     if (resposns.success) {
                         const paymentcallresponse = await paymentCall(resposns.res);
+                        console.log(paymentcallresponse)
                         setisloading(false);
                         if (paymentcallresponse.success) {
                             const url = paymentcallresponse.data.checkout_url;
                             window.location.href = url;
 
                         } else {
-                            toast.warn(resposns.error);
+                            toast.warn(paymentcallresponse.error);
                         }
                     } else {
+                        setisloading(false);
                         toast.warn(resposns.error);
                     }
 
@@ -76,9 +77,9 @@ export default function Payment() {
 
                 const resposns = await res.json();
 
-
                 if (resposns.success) {
                     const paymentcallresponse = await paymentCall(resposns.res);
+                    console.log(paymentcallresponse);
                     setisloading(false);
                     if (paymentcallresponse.success) {
 
@@ -86,9 +87,10 @@ export default function Payment() {
                         window.location.href = url;
 
                     } else {
-                        toast.warn(resposns.error);
+                        toast.warn(paymentcallresponse.error);
                     }
                 } else {
+                    setisloading(false);
                     toast.warn(resposns.error);
                 }
             }

@@ -1,5 +1,5 @@
-import { paymentSystemDeleter, paymentSystemUpdateWhenThePaymentIsComplate } from "../../../helper/paymentsystemUpdater&Deleter";
 import { varifyingpayment } from "../../../helper/shurjopayconfig";
+// import paymentSystemUpdater from "../../../helper/paymentSystemUpdater";
 
 
 
@@ -22,16 +22,51 @@ async function forget(req, res) {
         //distructure and difind in a one variable from data which is pass from the front end
         const { order_id } = req.query;
 
-        // console.log("fasdgsdgsdfrgsdfg" + order_id);
 
         //varifying payment
         varifyingpayment(order_id)
             .then((res_data) => {
 
+                console.log(res_data);
+
                 if (res_data[0].sp_code == 1000) {
 
 
-                    const isupdate = paymentSystemUpdateWhenThePaymentIsComplate(res_data[0].order_id, true);
+                    // const dataobject = {
+                    //     uid: id,
+                    //     name: `${fName} ${lName}`,
+                    //     fName: faterName,
+                    //     pTitle: title,
+                    //     pType: month || null,
+                    //     amount: corrospendingBalance,
+                    //     option: "Online",
+                    //     status: false,
+                    //     order_id: paymentInitiate_response.sp_order_id
+                    // };
+
+
+                    // const system_res = await paymentSystemUpdater(dataobject);
+
+                    // if (system_res) {
+
+
+                    //     return NextResponse.json({
+                    //         messge: 'Payment Initiate Successfully',
+                    //         success: true,
+                    //         data: paymentInitiate_response
+                    //     }, {
+                    //         status: 200
+                    //     })
+
+                    // } else {
+                    //     return NextResponse.json({
+                    //         success: false,
+                    //         error: "There Was a Server Side Problem"
+                    //     }, {
+                    //         status: 500
+                    //     })
+
+                    // }
 
                     if (isupdate) {
                         res.status(200).json({
@@ -41,10 +76,6 @@ async function forget(req, res) {
                     }
 
                 } else {
-
-                    //delete existing racord for payment failed
-                    paymentSystemDeleter(res_data[0].order_id)
-
                     //faild response
                     res.status(500).json({
                         success: false,

@@ -17,4 +17,4 @@ async function paymentCall(data) {
     return resposns;
 }
 
-export default paymentCall
+export default paymentCall;

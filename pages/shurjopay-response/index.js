@@ -37,8 +37,6 @@ export async function getServerSideProps(context) {
         }
 
     } catch (error) {
-        // Handle the error
-        console.error("An error occurred:", error);
 
         // You can return an error page or an error message here if needed
         return {
