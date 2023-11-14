@@ -4,8 +4,6 @@ ConnectDB(); // Connect to the database on application start
 
 // helper/paymentsystemUpdater&Deleter.js
 import { customAlphabet } from "nanoid";
-import { paymentSystemUpdater } from "../../../helper/paymentsystemUpdater&Deleter";
-import { makingpayment } from "../../../helper/shurjopayconfig";
 import { PaymentController, Student } from "../../../mongoDB/models/models";
 
 
@@ -66,30 +64,31 @@ async function handlePostRequest(req, res) {
 
     try {
 
-
-        const res_data = await makingpayment(alldata);
-
-        const dataobject = {
-            uid: id,
-            name: `${fName} ${lName}`,
-            fName: faterName,
-            pTitle: title,
-            pType: month || null,
-            amount: corrospendingBalance,
-            option: "Online",
-            status: false,
-            order_id: res_data.sp_order_id
-        };
+        res.status(200).json({ success: true, res: alldata });
 
 
-        const system_res = await paymentSystemUpdater(dataobject);
+
+        // const dataobject = {
+        //     uid: id,
+        //     name: `${fName} ${lName}`,
+        //     fName: faterName,
+        //     pTitle: title,
+        //     pType: month || null,
+        //     amount: corrospendingBalance,
+        //     option: "Online",
+        //     status: false,
+        //     order_id: res_data.sp_order_id
+        // };
 
 
-        if (system_res) {
-            res.status(200).json({ success: true, res: res_data });
-        } else {
-            res.status(500).json({ success: false, error: "There Was a Server Side Problem" });
-        }
+        // const system_res = await paymentSystemUpdater(dataobject);
+
+
+        // if (system_res) {
+        //     res.status(200).json({ success: true, res: res_data });
+        // } else {
+        //     res.status(500).json({ success: false, error: "There Was a Server Side Problem" });
+        // }
     } catch (error) {
         res.status(500).json({ success: false, error: "Payment was Failed" });
     }

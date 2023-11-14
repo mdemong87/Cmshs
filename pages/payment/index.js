@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Container from "../../componnent/Container";
 import Loding from "../../componnent/Loding";
 import Meta from "../../componnent/Meta";
+import paymentCall from '../../helper/paymentCall';
 import paymentImage from "../../public/payments.jpg";
 import styles from "../../styles/payment/payment.module.css";
 
@@ -43,12 +44,12 @@ export default function Payment() {
                     const resposns = await res.json();
                     console.log(resposns);
                     setisloading(false);
-                    if (resposns.success) {
-                        const url = resposns.res.checkout_url;
-                        window.location.href = url;
-                    } else {
-                        toast.warn(resposns.error)
-                    }
+                    // if (resposns.success) {
+                    //     const url = resposns.res.checkout_url;
+                    //     window.location.href = url;
+                    // } else {
+                    //     toast.warn(resposns.error)
+                    // }
 
 
                 } else {
@@ -67,12 +68,21 @@ export default function Payment() {
                 });
 
                 const resposns = await res.json();
-                setisloading(false);
+
                 if (resposns.success) {
-                    const url = resposns.res.checkout_url;
-                    window.location.href = url;
+                    const paymentcallresponse = await paymentCall(resposns.res);
+
+                    if (paymentcallresponse.success) {
+                        setisloading(false);
+
+                        console.log(paymentcallresponse);
+
+                    } else {
+                        setisloading(false);
+                        toast.warn(resposns.error);
+                    }
                 } else {
-                    toast.warn(resposns.error)
+                    toast.warn(resposns.error);
                 }
             }
 

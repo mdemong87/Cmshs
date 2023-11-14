@@ -48,6 +48,8 @@ export async function makingpayment(alldata) {
             (response_data) => {
                 // TODO Handle response from shurjopay and update your system
                 resolve(response_data);
+
+                console.log(response_data);
             },
             (error) => {
                 // TODO Handle error response
