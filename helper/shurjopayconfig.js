@@ -27,7 +27,7 @@ shurjopay.config(
 
 
 //create varify payment function and export it for uses from otherwhere
-export async function varifyingpayment(order_id) {
+async function varifyingpayment(order_id) {
 
     return new Promise((resolve, reject) => {
         shurjopay.verifyPayment(order_id, (response_data) => {
@@ -42,3 +42,5 @@ export async function varifyingpayment(order_id) {
         );
     });
 }
+
+export default varifyingpayment;

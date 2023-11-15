@@ -2,7 +2,7 @@
 import connectDb from "../mongoDB/connectDb";
 import { PHistory } from "../mongoDB/models/models";
 
-export async function paymentSystemUpdater(dataobject) {
+async function paymentSystemUpdater(dataobject) {
 
 
     //update the own systems

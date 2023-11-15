@@ -1,5 +1,5 @@
-import { varifyingpayment } from "../../../helper/shurjopayconfig";
-// import paymentSystemUpdater from "../../../helper/paymentSystemUpdater";
+import paymentSystemUpdater from "../../../helper/paymentSystemUpdater";
+import varifyingpayment from "../../../helper/shurjopayconfig";
 
 
 
@@ -27,87 +27,68 @@ async function forget(req, res) {
         varifyingpayment(order_id)
             .then((res_data) => {
 
-                console.log(res_data);
-
                 if (res_data[0].sp_code == 1000) {
 
 
-                    // const dataobject = {
-                    //     uid: res_data[0].value3,
-                    //     name: res_data[0].name,
-                    //     fName: faterName,
-                    //     pTitle: title,
-                    //     pType: month || null,
-                    //     amount: corrospendingBalance,
-                    //     option: "Online",
-                    //     status: false,
-                    //     order_id: paymentInitiate_response.sp_order_id
-                    // };
+                    //difind data as a object for update the system
+                    const dataobject = {
+                        uid: res_data[0].value3,
+                        name: res_data[0].name,
+                        pTitle: res_data[0].value1,
+                        pType: res_data[0].value2 || null,
+                        amount: res_data[0].amount,
+                        option: "Online",
+                        status: true,
+                        order_id: res_data[0].order_id
+                    };
 
+                    //update the system when payment was complate
+                    const system_res = paymentSystemUpdater(dataobject);
 
-                    // const system_res = await paymentSystemUpdater(dataobject);
+                    //check system was update or not
+                    if (system_res) {
 
-                    // if (system_res) {
-
-
-                    //     return NextResponse.json({
-                    //         messge: 'Payment Initiate Successfully',
-                    //         success: true,
-                    //         data: paymentInitiate_response
-                    //     }, {
-                    //         status: 200
-                    //     })
-
-                    // } else {
-                    //     return NextResponse.json({
-                    //         success: false,
-                    //         error: "There Was a Server Side Problem"
-                    //     }, {
-                    //         status: 500
-                    //     })
-
-                    // }
-
-                    if (isupdate) {
                         res.status(200).json({
+                            messge: 'Payment Complate Successfully',
                             success: true,
                             res: res_data,
                         });
+
+                    } else {
+
+                        //faild response
+                        res.status(500).json({
+                            success: false,
+                            error: "There Was a Server Side Problem"
+                        });
                     }
 
+
+
+
                 } else {
-                    //faild response
                     res.status(500).json({
                         success: false,
-                        error: "Payment was failed",
+                        error: "There was a server-side problem",
                     });
                 }
 
+
+
             })
             .catch((error) => {
-                // Handle any errors that occurred during payment initiation
+                // Handle any errors that occurred during payment varification
                 res.status(500).json({
                     success: false,
-                    error: "Payment was failed",
-                });
-            });
-
-
-
-
-
-
-
-
+                    error: "There was a server-side problem",
+                })
+            })
 
 
     } catch (err) {
-        console.error("An error occurred:", err);
-        // Other server-side error
         res.status(500).json({
             success: false,
             error: "There was a server-side problem",
         });
-
     }
 }

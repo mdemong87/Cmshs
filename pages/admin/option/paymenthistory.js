@@ -9,6 +9,8 @@ export default function PaymentHistory({ data }) {
     const [studentId, setstudentId] = useState("");
 
 
+    console.log(data);
+
 
 
     const filteringData = data.paymenthistory.filter((singleItem) => {
@@ -41,7 +43,6 @@ export default function PaymentHistory({ data }) {
                             <td>ID</td>
                             <td>Order ID</td>
                             <td>Name</td>
-                            <td>Father&apos;s Name</td>
                             <td>Payment Title</td>
                             <td>Amount</td>
                             <td>Date</td>
@@ -57,7 +58,6 @@ export default function PaymentHistory({ data }) {
                                     <td>{item.uid}</td>
                                     <td>{item.order_id}</td>
                                     <td>{item.name}</td>
-                                    <td>{item.fName}</td>
                                     <td>{item.pType == null ? `${item.pTitle}` : `${item.pTitle} (${item.pType == "0" ? "Fee" : item.pType})`}</td>
                                     <td>{item.amount}</td>
                                     <td>{localdate(item)}</td>
