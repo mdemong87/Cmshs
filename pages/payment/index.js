@@ -45,7 +45,6 @@ export default function Payment() {
 
                     if (resposns.success) {
                         const paymentcallresponse = await paymentCall(resposns.res);
-                        console.log(paymentcallresponse)
                         setisloading(false);
                         if (paymentcallresponse.success) {
                             const url = paymentcallresponse.data.checkout_url;
@@ -79,7 +78,6 @@ export default function Payment() {
 
                 if (resposns.success) {
                     const paymentcallresponse = await paymentCall(resposns.res);
-                    console.log(paymentcallresponse);
                     setisloading(false);
                     if (paymentcallresponse.success) {
 
