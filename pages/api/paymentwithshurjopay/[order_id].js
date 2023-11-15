@@ -34,6 +34,7 @@ async function forget(req, res) {
                     const dataobject = {
                         uid: res_data[0].value3,
                         name: res_data[0].name,
+                        calas: res_data[0].value4,
                         pTitle: res_data[0].value1,
                         pType: res_data[0].value2 || null,
                         amount: res_data[0].amount,

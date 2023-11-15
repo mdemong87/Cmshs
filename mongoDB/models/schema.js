@@ -200,6 +200,7 @@ export const paymentController = {
 export const paymentHistory = {
     uid: String,
     name: String,
+    calas: String,
     pTitle: String,
     pType: String,
     amount: String,
