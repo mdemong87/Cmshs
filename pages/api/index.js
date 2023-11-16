@@ -1,5 +1,5 @@
 import connectDb from "../../mongoDB/connectDb";
-import { Employee, Student } from "../../mongoDB/models/models";
+import { Employee, PHistory, Student } from "../../mongoDB/models/models";
 
 
 
@@ -11,18 +11,26 @@ export default async function handler(req, res) {
     // Fetch students with status true
     const student = await Student.find({ status: true });
 
-    // Fetch all teachers
-    const teacher = await Employee.find();
+    // Fetch all employee
+    const employee = await Employee.find();
+
+    //fetch all paymentdata
+    const paymenthistory = await PHistory.find();
 
     // Calculate the lengths
     const studentLength = student.length;
-    const teacherLength = teacher.length;
+    const employeeLength = employee.length;
+
+
+
+
+
 
     // Send a successful response
     res.status(200).json({
       student: studentLength,
-      teacher: teacherLength,
-      earning: "10000",
+      employee: employeeLength,
+      earning: paymenthistory,
       success: true
     });
   } catch (error) {

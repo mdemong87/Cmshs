@@ -10,7 +10,7 @@ export default function Admin({ data, error }) {
 
     const forFetured = {
         studentLength: data?.student,
-        teacherLength: data?.teacher,
+        teacherLength: data?.employee,
         earning: data?.earning,
     }
 
@@ -27,7 +27,7 @@ export default function Admin({ data, error }) {
         <div className={styles.adminWrp}>
             <FutureAdeshboard forFetured={forFetured} />
 
-            <ChartAdeshboard />
+            <ChartAdeshboard forChart={data?.earning} />
 
             <DetailseDeshboard />
         </div>
