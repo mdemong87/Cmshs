@@ -5,10 +5,12 @@ import styles from "../../styles/Admin/FutureAdeshboard.module.css";
 
 export default function FutureAdeshboard({ forFetured }) {
 
+    console.log(forFetured);
+
 
     //sum all payment amount 
     let total = 0;
-    forFetured.earning.map((item) => {
+    forFetured?.earning.map((item) => {
 
         const date = new Date();
         const currentyear = date.getFullYear();
@@ -17,7 +19,6 @@ export default function FutureAdeshboard({ forFetured }) {
         if (currentyear == getyear) {
             total += Math.ceil(item.amount);
         }
-
     })
 
 
