@@ -8,7 +8,7 @@ export default function FutureAdeshboard({ forFetured }) {
 
     //sum all payment amount 
     let total = 0;
-    const amount = forFetured.earning.map((item) => {
+    forFetured.earning.map((item) => {
 
         const date = new Date();
         const currentyear = date.getFullYear();
