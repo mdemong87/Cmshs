@@ -5,12 +5,12 @@ import styles from "../../styles/Admin/FutureAdeshboard.module.css";
 
 export default function FutureAdeshboard({ forFetured }) {
 
-    console.log(forFetured);
+    const { earning, studentLength, teacherLength } = forFetured;
 
 
     //sum all payment amount 
     let total = 0;
-    forFetured?.earning.map((item) => {
+    earning.map((item) => {
 
         const date = new Date();
         const currentyear = date.getFullYear();
@@ -32,7 +32,7 @@ export default function FutureAdeshboard({ forFetured }) {
                 </div>
                 <div className={styles.fetervalue}>
                     <b>Students</b>
-                    <b className={styles.digit}>{forFetured.studentLength}</b>
+                    <b className={styles.digit}>{studentLength}</b>
                 </div>
             </div>
             <div className={styles.futureList}>
@@ -43,7 +43,7 @@ export default function FutureAdeshboard({ forFetured }) {
                 </div>
                 <div className={styles.fetervalue}>
                     <b>Employees</b>
-                    <b className={styles.digit}>{forFetured.teacherLength}</b>
+                    <b className={styles.digit}>{teacherLength}</b>
                 </div>
             </div>
             <div className={styles.futureList}>
