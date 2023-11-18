@@ -39,7 +39,7 @@ export default function Result({ data, error }) {
 
     return (
         <main>
-            <Meta title="Result" name="result" content='result' />
+            <Meta title="Result || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     <h1 style={{

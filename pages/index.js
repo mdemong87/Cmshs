@@ -27,7 +27,7 @@ export default function Home({ data, datatwo, datathree }) {
 
   return (
     <main>
-      <Meta title="Home" name="Home" content='Home' />
+      <Meta title="Home || Chandash Mokhdum Shah High School" />
       <div className={styles.container}>
         <Banner />
         <Container>

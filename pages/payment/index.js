@@ -106,7 +106,7 @@ export default function Payment() {
     return (
         <main>
             <ToastContainer position="top-center" />
-            <Meta title="Payment" name="payment" content='payment' />
+            <Meta title="Payment || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.paymentWrp}>
                     {isloading && <Loding />}

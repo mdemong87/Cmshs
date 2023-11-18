@@ -11,7 +11,7 @@ export default function SingleLibrary({ data }) {
 
     return (
         <main>
-            <Meta title="Library Book" name="library book" content='Library book' />
+            <Meta title="Library Book || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.containersingle}>
                     <div>

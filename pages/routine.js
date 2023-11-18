@@ -26,7 +26,7 @@ export default function Routine({ data, error }) {
 
     return (
         <main>
-            <Meta title="Routine" name="routine" content='routine' />
+            <Meta title="Routine || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     <h1 style={{

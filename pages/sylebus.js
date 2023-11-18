@@ -11,7 +11,7 @@ export default function Sylabus({ data, error }) {
 
     return (
         <main>
-            <Meta title="Sylebus" name="sylebus" content="sylebus" />
+            <Meta title="Sylebus || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     <h1 style={{

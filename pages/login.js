@@ -6,7 +6,7 @@ import styles from "../styles/Login.module.css";
 export default function Login() {
     return (
         <main>
-            <Meta title="Login Page" name="Login Page" content='Login page' />
+            <Meta title="Login Page || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.singlelogin}>
                     <SingleLogin title="Admin Login" fildTwo='Password' FildOne='Email' buttonTitle="Login" />

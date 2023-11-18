@@ -8,7 +8,7 @@ import styles from "../styles/About.module.css";
 export default function AboutPage() {
   return (
     <main>
-      <Meta title="About" name="about" content='about' />
+      <Meta title="About || Chandash Mokhdum Shah High School" />
       <div className={styles.aboutContainer}>
         <Container>
           <div className={styles.fristAboutsectionWrp}>

@@ -9,7 +9,7 @@ export default function Notice({ data, error }) {
 
     return (
         <main className={styles.container}>
-            <Meta title="Notice" name="Notice" content='Notice' />
+            <Meta title="Notice || Chandash Mokhdum Shah High School" />
             <Container>
                 <h1 style={{
                     textAlign: "center",

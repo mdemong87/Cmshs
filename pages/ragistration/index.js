@@ -17,7 +17,7 @@ export default function Index() {
 
     return (
         <main className={styles.RAndAWrp}>
-            <Meta title="Ragistration" name="Ragistration" content='Ragistration' />
+            <Meta title="Ragistration || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     {loding && <Loding />}

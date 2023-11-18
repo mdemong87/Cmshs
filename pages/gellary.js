@@ -25,7 +25,7 @@ export default function Gellary() {
 
     return (
         <main>
-            <Meta title="Gellary" name="gellary" content='gellary' />
+            <Meta title="Gellary || Chandash Mokhdum Shah High School" />
             <ToastContainer position="top-center" />
             <Container>
                 <div className={styles.container}>

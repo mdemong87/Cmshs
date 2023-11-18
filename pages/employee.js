@@ -38,7 +38,7 @@ export default function Employee({ data, error }) {
 
     return (
         <main>
-            <Meta title="Employee" name="employee" content='employee' />
+            <Meta title="Employee || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     <h1 style={{

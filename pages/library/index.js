@@ -27,7 +27,7 @@ export default function Index({ data }) {
 
     return (
         <main>
-            <Meta title="Library" name="library" content='library' />
+            <Meta title="Library || Chandash Mokhdum Shah High School" />
             <Container>
                 <div className={styles.container}>
                     <div>

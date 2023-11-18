@@ -71,18 +71,18 @@ export default function ChartAdeshboard({ forChart }) {
 
 
     const data = [
-        { name: 'Janu', Er: jan, Ex: 10 },
-        { name: 'Frb', Er: feb, Ex: 10 },
-        { name: 'Mar', Er: mar, Ex: 10 },
-        { name: 'Apr', Er: apr, Ex: 10 },
-        { name: 'May', Er: may, Ex: 10 },
-        { name: 'Jun', Er: jun, Ex: 10 },
-        { name: 'Jul', Er: jul, Ex: 10 },
-        { name: 'Aug', Er: aug, Ex: 10 },
-        { name: 'Sep', Er: sep, Ex: 10 },
-        { name: 'Oct', Er: oct, Ex: 10 },
-        { name: 'Nov', Er: nov, Ex: 10 },
-        { name: 'Dec', Er: dec, Ex: 10 },
+        { name: 'Janu', Er: jan, Ex: 0 },
+        { name: 'Frb', Er: feb, Ex: 0 },
+        { name: 'Mar', Er: mar, Ex: 0 },
+        { name: 'Apr', Er: apr, Ex: 0 },
+        { name: 'May', Er: may, Ex: 0 },
+        { name: 'Jun', Er: jun, Ex: 0 },
+        { name: 'Jul', Er: jul, Ex: 0 },
+        { name: 'Aug', Er: aug, Ex: 0 },
+        { name: 'Sep', Er: sep, Ex: 0 },
+        { name: 'Oct', Er: oct, Ex: 0 },
+        { name: 'Nov', Er: nov, Ex: 0 },
+        { name: 'Dec', Er: dec, Ex: 0 },
     ];
 
 
