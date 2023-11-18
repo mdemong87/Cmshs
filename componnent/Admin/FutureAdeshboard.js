@@ -8,23 +8,22 @@ export default function FutureAdeshboard({ forFetured }) {
     const { earning, studentLength, teacherLength } = forFetured;
 
 
-    // if (Array.isArray(earning)) {
-    //     console.log("This is an array");
-    // }
 
+    if (Array.isArray(earning)) {
+        // sum all payment amount
+        var total = 0;
+        earning.map((item) => {
 
-    //sum all payment amount 
-    // let total = 0;
-    // earning.map((item) => {
+            const date = new Date();
+            const currentyear = date.getFullYear();
+            const getyear = date.getFullYear(item.createdAt);
 
-    //     const date = new Date();
-    //     const currentyear = date.getFullYear();
-    //     const getyear = date.getFullYear(item.createdAt);
+            if (currentyear == getyear) {
+                total += Math.ceil(item.amount);
+            }
+        })
+    }
 
-    //     if (currentyear == getyear) {
-    //         total += Math.ceil(item.amount);
-    //     }
-    // })
 
 
     return (
@@ -59,7 +58,7 @@ export default function FutureAdeshboard({ forFetured }) {
                 </div>
                 <div className={styles.fetervalue}>
                     <b>Earning</b>
-                    <b className={styles.digit}>10000 /-</b>
+                    <b className={styles.digit}>{total} /-</b>
                 </div>
             </div>
         </div>

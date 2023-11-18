@@ -20,9 +20,6 @@ export default function PaymentHistory({ data }) {
 
 
 
-
-
-
     return (
         <div className={styles.PaymentHistoryWrp}>
 
@@ -58,7 +55,7 @@ export default function PaymentHistory({ data }) {
                                     <td>{item.name}</td>
                                     <td>{item.calas}</td>
                                     <td>{item.pType == null ? `${item.pTitle}` : `${item.pTitle} (${item.pType == "0" ? "Fee" : item.pType})`}</td>
-                                    <td>{item.amount}</td>
+                                    <td>{Math.ceil(item.amount)}</td>
                                     <td>{localdate(item)}</td>
                                     <td>{item.option}</td>
                                     <td>

@@ -22,51 +22,52 @@ export default function ChartAdeshboard({ forChart }) {
 
 
 
-    // // update date
-    // const filterYearData = forChart.filter((item) => {
+    if (Array.isArray(forChart)) {
+        // update date
+        var filterYearData = forChart.filter((item) => {
 
-    //     const date = new Date();
-    //     const currentyear = date.getFullYear();
-    //     const getyear = date.getFullYear(item.createdAt);
-    //     const final = currentyear == getyear;
-    //     return final;
-    // })
-
-    // const filterMonthData = filterYearData.filter((item) => {
-    //     const date = new Date();
-    //     const getmonth = date.getMonth(item.createdAt);
-
-    //     if (getmonth == 0) {
-    //         jan += Math.ceil(item.amount);
-    //     } else if (getmonth == 1) {
-    //         feb += Math.ceil(item.amount);
-    //     } else if (getmonth == 2) {
-    //         mar += Math.ceil(item.amount);
-    //     } else if (getmonth == 3) {
-    //         apr += Math.ceil(item.amount);
-    //     } else if (getmonth == 4) {
-    //         may += Math.ceil(item.amount);
-    //     } else if (getmonth == 5) {
-    //         jun += Math.ceil(item.amount);
-    //     } else if (getmonth == 6) {
-    //         jul += Math.ceil(item.amount);
-    //     } else if (getmonth == 7) {
-    //         aug += Math.ceil(item.amount);
-    //     } else if (getmonth == 8) {
-    //         sep += Math.ceil(item.amount);
-    //     } else if (getmonth == 9) {
-    //         oct += Math.ceil(item.amount);
-    //     } else if (getmonth == 10) {
-    //         nov += Math.ceil(item.amount);
-    //     } else if (getmonth == 11) {
-    //         dec += Math.ceil(item.amount);
-    //     }
-    // })
+            const date = new Date();
+            const currentyear = date.getFullYear();
+            const getyear = date.getFullYear(item.createdAt);
+            const final = currentyear == getyear;
+            return final;
+        })
+    }
 
 
 
+    if (Array.isArray(filterYearData)) {
+        var filterMonthData = filterYearData.filter((item) => {
+            const date = new Date();
+            const getmonth = date.getMonth(item.createdAt);
 
-
+            if (getmonth == 0) {
+                jan += Math.ceil(item.amount);
+            } else if (getmonth == 1) {
+                feb += Math.ceil(item.amount);
+            } else if (getmonth == 2) {
+                mar += Math.ceil(item.amount);
+            } else if (getmonth == 3) {
+                apr += Math.ceil(item.amount);
+            } else if (getmonth == 4) {
+                may += Math.ceil(item.amount);
+            } else if (getmonth == 5) {
+                jun += Math.ceil(item.amount);
+            } else if (getmonth == 6) {
+                jul += Math.ceil(item.amount);
+            } else if (getmonth == 7) {
+                aug += Math.ceil(item.amount);
+            } else if (getmonth == 8) {
+                sep += Math.ceil(item.amount);
+            } else if (getmonth == 9) {
+                oct += Math.ceil(item.amount);
+            } else if (getmonth == 10) {
+                nov += Math.ceil(item.amount);
+            } else if (getmonth == 11) {
+                dec += Math.ceil(item.amount);
+            }
+        })
+    }
 
 
     const data = [

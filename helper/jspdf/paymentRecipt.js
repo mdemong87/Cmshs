@@ -11,7 +11,7 @@ function paymentRecipt(data) {
     const status = data[0].value4;
     const number = data[0].phone_no;
     const title = `${data[0].value1}(${data[0].value2 == "0" ? "fee" : data[0].value2})`;
-    const amount = data[0].amount;
+    const amount = Math.ceil(data[0].amount);
     const address = data[0].address;
 
     const utcDate = new Date(data[0].date_time);
