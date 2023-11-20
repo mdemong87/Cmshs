@@ -18,7 +18,7 @@ export default function AllstTable({ data, error }) {
         )
     }
 
-    console.log(data);
+
 
 
     return (

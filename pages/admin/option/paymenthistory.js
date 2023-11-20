@@ -9,14 +9,16 @@ export default function PaymentHistory({ data }) {
     const [studentId, setstudentId] = useState("");
 
 
+    // search functionality
+    var filter = [];
+    for (let i = 0; i < data.paymenthistory.length; i++) {
 
-    const filteringData = data.paymenthistory.filter((singleItem) => {
-        if (studentId != "") {
-            return singleItem.uid === studentId;
-        } else {
-            return data.paymenthistory;
+        // check if the search text match the system or not
+        if (data.paymenthistory[i].uid.indexOf(studentId) > -1) {
+            filter.push(data.paymenthistory[i]);
         }
-    })
+    }
+
 
 
 
@@ -25,7 +27,7 @@ export default function PaymentHistory({ data }) {
 
             <div className={styles.headignWrp}>
                 <h1>Payment History</h1>
-                <input onChange={(e) => setstudentId(e.target.value)} type='number' placeholder='Find History By ID' />
+                <input onKeyUp={(e) => setstudentId(e.target.value)} type='number' placeholder='Find History By ID' />
             </div>
 
             {/* history table from here */}
@@ -47,7 +49,7 @@ export default function PaymentHistory({ data }) {
                     </thead>
                     <tbody>
                         {
-                            filteringData.map((item, index) => {
+                            filter.map((item, index) => {
                                 return <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{item.uid}</td>

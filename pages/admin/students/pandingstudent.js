@@ -10,6 +10,28 @@ export default function PaddingStudents({ data, error }) {
 
 
     const [loading, setloading] = useState(false);
+    const [studentId, setstudentId] = useState('');
+
+
+
+
+
+
+
+    // search functionality
+    var filter = [];
+    for (let i = 0; i < data.length; i++) {
+
+        // check if the search text match the system or not
+        if (data[i].customid.indexOf(studentId) > -1) {
+            filter.push(data[i]);
+        }
+    }
+
+
+
+
+
 
     return (
 
@@ -18,9 +40,9 @@ export default function PaddingStudents({ data, error }) {
             <div className={styles.tableHeader}>
 
                 <h1> Padding Students</h1>
-                <input placeholder="Search" className={styles.input} type='search' />
+                <input onKeyUp={(e) => setstudentId(e.target.value)} placeholder="Search" className={styles.input} type='search' />
             </div>
-            <PandingTable Data={data} error={error} loading={loading} setloading={setloading} />
+            <PandingTable Data={filter} error={error} loading={loading} setloading={setloading} />
         </div>
     )
 }

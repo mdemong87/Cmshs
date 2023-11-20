@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AllstTable from "../../../componnent/Admin/AllstTable";
 import Layout from "../../../componnent/Admin/Layout";
 import Meta from "../../../componnent/Meta";
@@ -6,15 +7,36 @@ import styles from "../../../styles/Admin/Allstudents.module.css";
 
 export default function Allstudents({ data, error }) {
 
+    const [studentId, setstudentId] = useState('');
+
+
+
+
+    // search functionality
+    var filter = [];
+    for (let i = 0; i < data.length; i++) {
+
+        // check if the search text match the system or not
+        if (data[i].customid.indexOf(studentId) > -1) {
+            filter.push(data[i]);
+        }
+    }
+
+
+
+
+
+
+
     return (
 
         <div className={styles.Swrp}>
             <Meta title="Admin" name="Admin" content='Admin' />
             <div className={styles.tableHeader}>
                 <h1> All Students</h1>
-                <input placeholder="Search" className={styles.input} type='search' />
+                <input onKeyUp={(e) => setstudentId(e.target.value)} placeholder="Search" className={styles.input} type='search' />
             </div>
-            <AllstTable data={data} error={error} />
+            <AllstTable data={filter} error={error} />
         </div>
     )
 }
