@@ -13,19 +13,20 @@ export default function GanarateFile({ data }) {
     const [sidforadmitecard, setsidforadmitecard] = useState('');
     const [sidforidcard, setsidforidcard] = useState('');
     const [sidfortestimonial, setsidfortestimonial] = useState('');
+    const [examtype, setexamtype] = useState('');
 
 
 
 
     function handleadmiteCard() {
 
-        if (sidforadmitecard != '') {
+        if (sidforadmitecard != '' && examtype != '') {
             const corospendingData = data.filter((item) => {
-                return item.customid == sidforidcard;
+                return item.customid == sidforadmitecard;
             })
 
 
-            admiteCard(corospendingData);
+            admiteCard(corospendingData[0], examtype);
         } else {
             toast.warn("Select Student ID & Exam Type");
         }
@@ -37,11 +38,11 @@ export default function GanarateFile({ data }) {
         if (sidfortestimonial != '') {
 
             const corospendingData = data.filter((item) => {
-                return item.customid == sidforidcard;
+                return item.customid == sidfortestimonial;
             })
 
 
-            testimonial();
+            testimonial(corospendingData[0]);
             toast.info("Testimonial Download Started");
 
         } else {
@@ -57,8 +58,6 @@ export default function GanarateFile({ data }) {
                 return item.customid == sidforidcard;
             })
 
-
-            console.log("gdfsgsdfg############");
             idCard(corospendingData);
             toast.info("ID Card Download Started");
         } else {
@@ -130,7 +129,7 @@ export default function GanarateFile({ data }) {
                 <div className={styles.header}>
                     <h2>Admite Card Ganarator</h2>
                     <div style={{ display: "flex", gap: "20px" }}>
-                        <select>
+                        <select onChange={(e) => setexamtype(e.target.value)}>
                             <option value={''}>Exam Type</option>
                             <option value={"1st-Semester"}>1st Semester</option>
                             <option value={"2nd-Semester"}>2nd Semester</option>
@@ -152,7 +151,7 @@ export default function GanarateFile({ data }) {
                             <option value={"November"}>Monthly November</option>
                             <option value={"December"}>Monthly December</option>
                         </select>
-                        <select>
+                        <select onChange={(e) => setsidforadmitecard(e.target.value)}>
                             <option value={''}>Select Student ID</option>
                             {
                                 data?.map((item, index) => {
