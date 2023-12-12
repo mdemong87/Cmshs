@@ -28,7 +28,7 @@ export default function Input({ name, type, require, vl, setFunction }) {
                 }
                 filereacder.readAsDataURL(file);
             } else {
-                toast.warn("File Size is too Large.Keep it is Less the 200 KB");
+                toast.warn("File Size is too Large.Keep it is Less then 200 KB");
             }
 
         }

@@ -5,8 +5,6 @@ import localdate from "../localdateConvartet";
 function testimonial(data) {
 
 
-    console.log(data);
-
 
     // Create the main PDF document
     const mainDoc = new jsPDF({

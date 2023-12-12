@@ -12,9 +12,6 @@ function admiteCard(data, type) {
     const clas = data.wadmit.toString();
     const date = localdate(data);
 
-    console.log(clas);
-    console.log(typeof clas);
-
     // Create a new PDF document
     const doc = new jsPDF({
         orientation: 'portrait', // Set the orientation to 'landscape'

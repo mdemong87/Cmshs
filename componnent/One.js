@@ -63,7 +63,7 @@ export default function One() {
 
                 <Select setFunction={setquata} label="Quata" length='4' value={["Selete Quata", "None", "Freedom Fighter", "Disable"]} selectValue={quata} />
 
-                <Select setFunction={setbloodGroup} label="Blood Group" length='9' require="*" value={["Select Blood Group", "A+", "B+", "O+", "AB+", "A-", "B-", "O-", "AB-"]} selectValue={bloodGroup} />
+                <Select setFunction={setbloodGroup} label="Blood Group" length='9' value={["Select Blood Group", "A+", "B+", "O+", "AB+", "A-", "B-", "O-", "AB-"]} selectValue={bloodGroup} />
 
                 <Input setFunction={setsContact} vl={sContact} name="Student Contact Number" type="text" />
 

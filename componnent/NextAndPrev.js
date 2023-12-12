@@ -197,7 +197,7 @@ export default function NextAndPrev({ setrander, rander, loding, setloding }) {
         e.preventDefault();
 
 
-        if (fName == '' || bName == '' || wadmit == '' || wadmit == "Select Class" || bloodGroup == "Select Blood Group" || bloodGroup == '' || religion == '' || religion == "Select Religion" || gender == '' || gender == "Selete Gander" || dateOFbrith == '' || brithregi == '' || faterName == '' || moterName == '' || fpNumber == '' || mpNumber == '' || prCountry == '' || prCountry == "Selete Country" || prDivision == "Selete Division" || prDivision == '' || prDistrict == '' || prUpazila == '' || prUnion == '' || prPost == '' || prVillage == '' || psCountry == '' || psCountry == "Selete Country" || psDivision == "Selete Division" || psDivision == '' || psDistrict == '' || psUpazila == '' || psUnion == '' || psPost == '' || psVillage == '' || familyCall == '' || photo == '') {
+        if (fName == '' || bName == '' || wadmit == '' || wadmit == "Select Class" || religion == '' || religion == "Select Religion" || gender == '' || gender == "Selete Gander" || dateOFbrith == '' || brithregi == '' || faterName == '' || moterName == '' || fpNumber == '' || mpNumber == '' || prCountry == '' || prCountry == "Selete Country" || prDivision == "Selete Division" || prDivision == '' || prDistrict == '' || prUpazila == '' || prUnion == '' || prPost == '' || prVillage == '' || psCountry == '' || psCountry == "Selete Country" || psDivision == "Selete Division" || psDivision == '' || psDistrict == '' || psUpazila == '' || psUnion == '' || psPost == '' || psVillage == '' || familyCall == '' || photo == '') {
 
             //react-rostify warning throw from here when the required filed is clear
             toast.warn("Please! Fillup All Required Fileds");
