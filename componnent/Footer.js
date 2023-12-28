@@ -81,7 +81,7 @@ export default function Footer() {
 
 
                     <div className={styles.copyRight}>Copyright © 2023
-                        Chandash Mokhdum Shah High School. All Rights Reserved || <Link style={{ color: "#dbb523" }} href="http://www.facebook.com/mdemong87">Developed By Md Emon Hossen</Link></div>
+                        Chandash Mokhdum Shah High School. All Rights Reserved || <Link style={{ color: "#dbb523" }} href="https://emonhossen.xyz">Developed By Md Emon Hossen</Link></div>
                 </div>
             </Container>
         </footer>
