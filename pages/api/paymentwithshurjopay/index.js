@@ -24,15 +24,25 @@ async function handler(req, res) {
 }
 
 async function handlePostRequest(req, res) {
-    const { id, calas, title, month } = req.body;
+    const {
+        id,
+        name,
+        number,
+        calas,
+        PaymentTitle,
+        exam,
+        monthName } = req.body;
+
 
 
 
     // Fetch student data and payment balance concurrently
     const [singleStudent, paymentBalance] = await Promise.all([
         Student.find({ customid: id }, 'customid fName lName faterName wadmit psVillage psUnion psUpazila psDistrict familyCall psDistrict psPost'),
-        PaymentController.find({ classes: calas }, title)
+        PaymentController.find({ classes: calas }, PaymentTitle.map((item) => item.value))
     ]);
+
+
 
     if (!singleStudent.length) {
         return res.status(500).json({ success: false, error: "Student Id Doesn't Match in the System" });
@@ -47,18 +57,19 @@ async function handlePostRequest(req, res) {
     if (!paymentBalance.length) {
         return res.status(500).json({
             success: false,
-            error: "Payment balance not found or missing 'title' property."
+            error: "Payment balance not found or missing 'Payment Title' property."
         });
     }
 
-    const corrospendingBalance = paymentBalance[0][title];
 
     //unique Id ganarator
     const uniqueIdganarator = customAlphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 12);
     const clientOrderID = uniqueIdganarator();
 
 
-    const alldata = { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, title, month, corrospendingBalance, clientOrderID };
+
+    //prepering all data for passing alldata as a response in the frontend
+    const alldata = { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, PaymentTitle, monthName, exam, paymentBalance, clientOrderID };
 
 
 

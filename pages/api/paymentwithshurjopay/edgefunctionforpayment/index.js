@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import arrayToString from "../../../../helper/arrayTostring";
 
 
 export const config = {
@@ -11,7 +12,30 @@ export default async function handler(req) {
 
 
 
-    const { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, title, month, corrospendingBalance, clientOrderID } = await req.json();
+    const { customid, fName, lName, wadmit, psDistrict, psVillage, psUnion, psUpazila, familyCall, psPost, PaymentTitle, monthName, exam, paymentBalance, clientOrderID } = await req.json();
+
+
+    // const paymentTitleStringValue = arrayToString(PaymentTitle);
+    const monthNameStringValue = arrayToString(monthName);
+    const paymentBalanceStringvcalue = arrayToString(paymentBalance);
+
+
+    //find the corrospending blance here
+    let corrospendingBalance = 0;
+    for (const key in paymentBalance[0]) {
+        if (typeof paymentBalance[0][key] === 'number') {
+
+
+            if (key == "Monthly") {
+                const monthNameLength = monthName.length;
+                corrospendingBalance += paymentBalance[0][key] * monthNameLength;
+
+            } else {
+                corrospendingBalance += paymentBalance[0][key];
+            }
+
+        }
+    }
 
 
     // defind credential in a variable
@@ -40,6 +64,8 @@ export default async function handler(req) {
 
 
 
+
+
         //initiate a payment with the ganarated token
         const initiate_payment = await fetch(responses.execute_url, {
             method: "POST",
@@ -55,7 +81,7 @@ export default async function handler(req) {
                 cancel_url: SP_RETURN_URL,
                 customer_email: "example@gmail.com",
                 store_id: `${responses.store_id}`,
-                amount: corrospendingBalance,
+                amount: `${corrospendingBalance}`,
                 order_id: clientOrderID,
                 currency: "BDT",
                 customer_name: `${fName} ${lName}`,
@@ -64,12 +90,10 @@ export default async function handler(req) {
                 customer_phone: familyCall,
                 customer_city: psDistrict,
                 customer_post_code: psPost,
-                value1: title,
-                value2: month,
+                value1: wadmit,
+                value2: monthNameStringValue,
                 value3: customid,
-                value4: wadmit
-
-
+                value4: `${paymentBalanceStringvcalue}`,
             })
         });
 

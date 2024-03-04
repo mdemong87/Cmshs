@@ -12,8 +12,6 @@ import styles from "../styles/payment/success.module.css";
 export default function Success({ downloadData }) {
 
 
-
-
     //handle download function
     function handleDownload() {
 

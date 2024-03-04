@@ -4,19 +4,28 @@ import jsPDF from "jspdf";
 function paymentRecipt(data) {
 
 
-    const sl = "1";
     const id = data[0].value3 || "";
     const name = data[0].name;
     const orderId = data[0].order_id;
-    const status = data[0].value4;
+    const calas = data[0].value1;
     const number = data[0].phone_no;
     const title = `${data[0].value1}(${data[0].value2 == "0" ? "fee" : data[0].value2})`;
     const amount = Math.ceil(data[0].amount);
     const address = data[0].address;
-
     const utcDate = new Date(data[0].date_time);
     const datestring = utcDate.toLocaleDateString();
     const date = datestring;
+    const monthNameDataArray = JSON.parse(`[${data[0].value2}]`);
+    const paymentTitleunitBalance = JSON.parse(`[${data[0].value4}]`);
+    const paymentTitleUnitBalanceArray = Object.entries(paymentTitleunitBalance[0]);
+    const without_idpaymentTitleUnitBalance = paymentTitleUnitBalanceArray.filter((item) => {
+        return item[0] != "_id";
+    })
+
+
+
+
+
 
 
 
@@ -52,18 +61,31 @@ function paymentRecipt(data) {
     doc.text(47, 56, name);
     doc.text(47, 65.5, orderId);
     doc.text(47, 74.3, address);
-    doc.text(165, 45.5, status);
+    doc.text(165, 45.5, calas);
     doc.text(165, 55, number);
     doc.text(165, 65.5, date);
 
+
     doc.setFontSize(16);
-    // sl
-    doc.text(26, 121, sl);
-    doc.text(43, 121, title);
-    doc.text(160, 121, `${amount} /-`);
+    without_idpaymentTitleUnitBalance.map((item, index) => {
+        doc.setFontSize(16);
+        if (item[0] == "Monthly") {
+            doc.text(26, index * 9 + 121, `${index + 1}`);
+            doc.text(43, index * 9 + 121, `${item[0]} (${monthNameDataArray.map((singlemonth) => singlemonth.label)})`);
+            doc.text(160, index * 9 + 121, `${item[1] * monthNameDataArray.length} /-`);
+        } else {
+            doc.text(26, index * 9 + 121, `${index + 1}`);
+            doc.text(43, index * 9 + 121, `${item[0]} fee`);
+            doc.text(160, index * 9 + 121, `${item[1]} /-`);
+        }
+    })
+
+
+
     doc.text(160, 210.6, `${amount} /-`);
     doc.text(160, 219.3, "00 /-");
     doc.text(160, 228.5, `${amount} /-`);
+
 
 
 
